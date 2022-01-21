@@ -1,0 +1,7 @@
+.icon-heart-active {
+    color: var(--background-colour);
+}
+
+.icon-heart {
+    color: var(--text-primary);
+}

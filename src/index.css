@@ -1,0 +1,11 @@
+:root   {
+    background-color: var(--background-colour);
+    margin: 0 !important;
+    color: var(--text-primary);
+    --background-colour:#121212;
+    --border-colour: #3700BB;
+    --item-colour: #222222;
+    --header-colour: #222222;
+    --text-primary: #BB86FC;
+}
+

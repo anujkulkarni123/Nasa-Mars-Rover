@@ -1,0 +1,15 @@
+.container  {
+    background-color: var(--header-colour);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 20px;
+    color: var(--text-primary);
+    margin: -8px;
+}
+
+.links  {
+    width: 200px;
+    height: fit-content;
+}

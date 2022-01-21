@@ -1,0 +1,59 @@
+.table-body {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    width: 280px;
+    display: flex; 
+    justify-content: center;
+    background-color: var(--item-colour);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.search-icon  {
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.input  {
+    width: 200px;
+    height: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.item-table   {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pagination {
+    width: 92%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--item-colour);
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 15px;
+    color: gray;
+  }
+  
+  .pagination > * {
+    cursor: pointer;
+  }
+  
+  .pg-active {
+    border-radius: 30px;
+    background-color: var(--item-colour);
+    color: var(--text-primary);
+  }

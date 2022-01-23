@@ -1,32 +1,18 @@
 import React,{ Component } from 'react';
 import { FaHeart, FaSadCry } from 'react-icons/fa';
 import "./HandleFavItem.css";
-import Cookies from 'js-cookie';
-
-const isFavourite = false;
 
 export default class HandleFavItems extends Component {
 
-    
-
     constructor(props)  {
         super(props);
+        
+        let isFavourite = false;
+
         this.state =    {
-            fav: Cookies.get('fav'),
+            fav: false,
             favItems: [],
         }
-
-    }
-
-    setCookie() {
-
-        Cookies.set('fav',isFavourite, { expires: 1 });
-
-        if (Cookies.get('fav')) {
-            Cookies.set('fav', false);
-        }
-
-        console.log(Cookies.get('fav'));
 
     }
     handleFav = () =>   {
@@ -34,12 +20,8 @@ export default class HandleFavItems extends Component {
         this.setState({ fav: !fav, });
         if (!fav)   {
             this.addFavs();
-            Cookies.set('fav', true);
-            console.log(Cookies.get('fav'));
         } else {
             this.deleteFavs();
-            Cookies.set('fav', false);
-            console.log(Cookies.get('fav'));
         }       
     }
 
@@ -59,12 +41,6 @@ export default class HandleFavItems extends Component {
                 favItems.splice(favItems[i], 1);
             }
         }
-    }
-
-    
-    
-    componentDidMount() {
-        this.setCookie();
     }
 
     render()    {

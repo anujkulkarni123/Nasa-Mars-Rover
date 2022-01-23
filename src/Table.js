@@ -13,6 +13,7 @@ class Table extends Component{
         currentPage: 0,
         offset: 0,
         search: '',
+        sol: 100,
     }
 
     componentDidMount() {
@@ -22,14 +23,16 @@ class Table extends Component{
     getNasaInfo = () => {
         const { search } = this.state;
 
-        axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=100&api_key=RV7EafhAxjrVWub5RMxxeqUiFhg5YlecKWwdCXFM`)
+        const { sol } = this.state;
+
+        axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=${sol}x&api_key=RV7EafhAxjrVWub5RMxxeqUiFhg5YlecKWwdCXFM`)
             .then(({data}) => {
                 let slice;
                 let pagesData;
                 if (search.length > 0)  {
                     const rows = data.photos;
                     slice = rows.filter((row) =>    {
-                        return row.id.toString().includes(search.toString());
+                        return row.sol.toString().includes(search.toString());
                     });
                     pagesData = [...slice]
                 } else {
@@ -63,7 +66,7 @@ class Table extends Component{
 
    handleSearch = (e) =>    {
        const value = e.target.value;
-       this.setState({ search: value, currentPage: 0});
+       this.setState({ search: value, currentPage: 0, sol: value});
        this.handlePageClick({ selected: 0});
        this.getNasaInfo();
    }

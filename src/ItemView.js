@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState }from 'react';
 import './ItemView.css';
-import HandleFavItems from './HandleFavItems'
+import { FaHeart }  from 'react-icons/fa';
+import HandleFavItems from './HandleFavItems';
 
 
-const ItemView = ({ID, Image, Date, RoverName}) => {
+function ItemView({ID, Image, Date, RoverName})  {
+    
+    const [isFav, setIsFav] = useState(false);
+
+    function handleChange()    { 
+        setIsFav(!isFav);
+    }
 
     return (
         <div key={ID} className='item-view'>
@@ -19,7 +26,9 @@ const ItemView = ({ID, Image, Date, RoverName}) => {
                 </div>
 
                 <div className='icon'>
-                <HandleFavItems id={ID} image={Image} date={Date} rover={RoverName}/>
+
+                {/*<FaHeart id="icon-heart" className={isFav ? 'icon-heart' : 'icon-heart-active'} onClick={handleChange}/>*/}
+                <HandleFavItems id={ID} image={Image} date={Date} rover={RoverName} isFav={isFav}/>
                 </div>
             </div>
         </div>

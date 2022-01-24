@@ -5,11 +5,11 @@ function Header() {
     return (
         <div className='container'>
             <div className='links'>
-                <a>Anuj kulkarni</a>
+                <label>Anuj kulkarni</label>
             </div>
 
             <div className='Mars'>
-                <a>Images from NASA Mars Rover API</a>
+                <label>Images from NASA Mars Rover API</label>
             </div>
         </div>
     )

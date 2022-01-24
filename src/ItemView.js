@@ -1,16 +1,12 @@
-import React, { useEffect, useState }from 'react';
+import React from 'react';
 import './ItemView.css';
-import { FaHeart }  from 'react-icons/fa';
 import HandleFavItems from './HandleFavItems';
 
 
-function ItemView({ID, Image, Date, RoverName})  {
+function ItemView({ID, Image, Date, RoverName, isFav})  {
     
-    const [isFav, setIsFav] = useState(false);
 
-    function handleChange()    { 
-        setIsFav(!isFav);
-    }
+    
 
     return (
         <div key={ID} className='item-view'>

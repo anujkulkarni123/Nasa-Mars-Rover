@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import { FaHeart, FaSadCry } from 'react-icons/fa';
+import { FaHeart } from 'react-icons/fa';
 import "./HandleFavItem.css";
 
 export default class HandleFavItems extends Component {
@@ -7,7 +7,6 @@ export default class HandleFavItems extends Component {
     constructor(props)  {
         super(props);
         
-        let isFavourite = false;
 
         this.state =    {
             fav: false,

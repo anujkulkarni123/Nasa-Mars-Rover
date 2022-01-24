@@ -7,17 +7,24 @@
 }
 
 .search-bar {
-    width: 280px;
+    width: 50%;
     display: flex; 
+    flex-direction: row;
     justify-content: center;
     background-color: var(--item-colour);
     padding: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
     border-radius: 10px;
 }
 
 .search-icon  {
-  margin-top: 5px;
+  padding-top: 5px;
   font-size: 15px;
+}
+
+.search-label {
+  padding-top: 8px;
 }
 
 .input  {

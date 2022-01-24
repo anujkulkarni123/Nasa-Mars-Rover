@@ -76,11 +76,17 @@ class Table extends Component{
         const { photos } = this.state;
         return(    
             <div className='table-body'>
+
+
                 <div className='search-bar'>
                     <form className='form'>
                         <FaSearch className='search-icon' />
-                        <input className="input"  type="search" placeholder="ID#" onChange={this.handleSearch}></input>
+                        <input className="input"  type="search" placeholder="SOl" onChange={this.handleSearch}></input>
                     </form>
+
+                    <div className='search-label'>
+                        <label>Change the SOL # to retrieve images from different days on Mars!</label>
+                    </div>
                 </div>
                 
                 <div className='item-table'>
